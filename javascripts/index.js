@@ -8,7 +8,10 @@ const image = new Image();
 image.src = images[Math.floor(Math.random() * images.length)];
 image.onload = () => {
   const canvas = document.createElement("canvas");
-  document.querySelector("#images").append(canvas);
+  const link = document.createElement("a");
+  link.href = image.src;
+  link.append(canvas);
+  document.querySelector("#images").append(link);
   const context = canvas.getContext("2d");
 
   const multiply = () => {
