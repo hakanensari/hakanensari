@@ -1,6 +1,7 @@
 const CANVAS_WIDTH = 270;
 const MARGIN_BOTTOM = 16;
-const MAX_SLICES = 15;
+const MAX_SLICES = 180;
+const SLICE_INTERVAL_MAX = 180;
 
 const images = ["images/index/IMG_3565.jpg"];
 const image = new Image();
@@ -38,7 +39,7 @@ image.onload = () => {
       context.putImageData(slice, width * index, 0);
     });
 
-    setTimeout(multiply, Math.random() * 50);
+    setTimeout(multiply, Math.random() * SLICE_INTERVAL_MAX);
   };
 
   multiply();
