@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@latest/new.min.css"
     />
-    {% if page.url == "/" %}
+    {%- if page.url == "/" %}
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -25,7 +25,7 @@
         ]
       }
     </script>
-    {% endif %}
+    {%- endif %}
   </head>
   <body>
     <header>
