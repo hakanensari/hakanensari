@@ -3,7 +3,10 @@ const MARGIN_BOTTOM = 16;
 const MAX_SLICES = 180;
 const SLICE_INTERVAL_MAX = 180;
 
-const images = ["images/index/IMG_3565.jpg"];
+const isRetina = window.devicePixelRatio > 1;
+const images = isRetina
+  ? ["images/index/thumbnails/IMG_3565@2x.jpg"]
+  : ["images/index/thumbnails/IMG_3565.jpg"];
 const image = new Image();
 
 image.src = images[Math.floor(Math.random() * images.length)];
