@@ -2,16 +2,20 @@
 layout: compress
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title | strip_html }}</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@latest/new.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/application.css?v={{ site.time | date: '%s' }}"
     />
     {%- if page.url == "/" %}
     <script type="application/ld+json">
@@ -23,8 +27,9 @@ layout: compress
         "url": "https://hakanensari.com",
         "sameAs": [
           "https://github.com/hakanensari",
-          "https://www.instagram.com/hakanensari",
           "https://www.linkedin.com/in/hakanensari",
+          "https://www.instagram.com/hakanensari",
+          "https://www.facebook.com/hakanensari",
           "https://x.com/hakanensari"
         ]
       }
